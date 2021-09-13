@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Kiểm tra năm nhuận</h2>
+</body>
+</html>
+
+<script>
+    let year = +prompt('nhap vao:')
+    let isLeapYear = false;
+    let chiahetcho4 = year % 4 == 0;
+    if (chiahetcho4) {
+        let chiahetcho100 = year % 100 == 0;
+        if (chiahetcho100) {
+            let chiahetcho400 = year % 400 === 0;
+            if (chiahetcho400) {
+                isLeapYear = true;
+            }
+        } else {
+            isLeapYear = true
+        }
+    }
+    if (isLeapYear) {
+        alert(year + " la nam nhuan")
+    } else {
+        alert(year + " khong la nam nhuan")
+    }
+</script>
+
+<!--<script>-->
+<!--    let year = parseInt(prompt("Enter a year"));-->
+<!--    let isLeapYear = false;-->
+<!--    if (year % 4 === 0) {-->
+<!--        if (year % 100 === 0) {-->
+<!--            if (year % 400 === 0) {-->
+<!--                isLeapYear = true;-->
+<!--            }-->
+<!--        } else {-->
+<!--            isLeapYear = true;-->
+<!--        }-->
+<!--    }-->
+<!--    if (isLeapYear) {-->
+<!--        alert(year + ' la nam nhuan')-->
+<!--    } else {-->
+<!--        alert(year + " khong la nam nhuan")-->
+<!--    }-->
+
+<!--</script>-->
+<!--<script>-->
+<!--    let year = parseInt(prompt("Enter a year"));-->
+<!--    if (year % 4 == 0) {-->
+<!--        if (year % 100 == 0) {-->
+<!--            if (year % 400 == 0) {-->
+<!--                alert(year +" la nam nhuan")-->
+<!--            }else {-->
+<!--                alert(year + " khong la nam nhuan")-->
+<!--            }-->
+<!--        }else {-->
+<!--            alert(year + " la nam nhuan")-->
+<!--        }-->
+<!--    }else {-->
+<!--        alert(year + " khong la nam nhuan")-->
+<!--    }-->
+<!--</script>-->
